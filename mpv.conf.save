@@ -1,0 +1,34 @@
+# === GPU ===
+hwdec=auto-copy
+hwdec-codecs=all
+
+# === SVP ===
+input-ipc-server=/tmp/mpvsocket
+hr-seek-framedrop=no
+
+# === СИНХРОНИЗАЦИЯ ===
+video-sync=audio
+audio-buffer=0.2
+
+# === КЕШ ===
+cache=yes
+demuxer-max-bytes=512M
+
+# === КАЧЕСТВО ===
+profile=gpu-hq
+scale=ewa_lanczossharp
+
+# === HDR ===
+tone-mapping=bt.2390
+hdr-compute-peak=yes
+target-colorspace-hint=yes
+
+# === АВТОПОВТОР ===
+loop-file=inf
+
+# === СКРЫТЬ ОШИБКИ ===
+msg-level=all=error
+
+# === YT-DLP ===
+ytdl-format=bestvideo[height<=1080]+bestaudio/best
+script-opts=ytdl_hook-ytdl_path=yt-dlp
